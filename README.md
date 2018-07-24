@@ -4,21 +4,11 @@ Please contact me (hyangl@umich.edu) if you have any questions or suggestions.
 
 ---
 
-## Citation
-
-```
-To be added
-
-```
-
----
-
 ## Installation
 Git clone a copy of TAIJI:
 
 ```
-git clone https://github.com/Hongyang449/drug_synergy.git
-
+git clone https://github.com/GuanLab/TAIJI.git
 ```
 ## Required dependencies
 
@@ -28,7 +18,6 @@ git clone https://github.com/Hongyang449/drug_synergy.git
 
 ```
 pip install -U scikit-learn
-
 ```
 
 ## Examples
@@ -43,13 +32,6 @@ Once you prepare and format the input monotherapy data, you can put them in the 
 
 ```
 bash bash.sh
-
 ```
 TAIJI automatically generates a prediction file prediction.csv in a very short time. If you run it using the simulated example data of 100 drug combinations, it takes about 5mins.
-
-
-## To-Do
-Add citation
-Upgrade
-
 
