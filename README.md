@@ -38,7 +38,7 @@ TAIJI automatically generates a prediction file prediction.csv in a very short t
 ### 3. Making predictions (using customized parameters)
 TAIJI has three prediction components based on different inputs: 1. monotherapy treatment effect 2. cell line-drug frequency 3. molecular profiles. The default weights of these three components are 1:1:2, which are based on [Yuanfang's winning solution](https://www.synapse.org/#!Synapse:syn5614689/wiki/396206) in the [AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge](https://www.synapse.org/#!Synapse:syn4231880/wiki/).
 
-These weights can be adjusted based on the input data. For example, if the user believes that their monotherapy input data is less reliable (e.g. due to large noise), they can adjust these weights (e.g. from 1:1:2 to 0.8:1:2) by running TAIJI like this:
+These weights can be adjusted based on the input data. For example, if the user believes that their monotherapy input data is less reliable (e.g. due to large noise), they can adjust these weights (e.g. from 1:1:2 to 0.8:2:4) by running TAIJI like this:
 ```
 bash TAIJI.sh 0.8 2 4
 ```
