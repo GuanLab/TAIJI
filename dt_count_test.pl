@@ -11,7 +11,8 @@ $id=$ARGV[1];
 $exclude_drug{$t[$id]}=0;
 $exclude_pair{$excluded}=0;
 
-open REF_DATA, "/home/gyuanfan/2016/DC/rawdata/Drug_synergy_data/Raw_Data_csv/cell_drug_count.txt" or die; # first line of this file has minor bug
+#open REF_DATA, "/home/gyuanfan/2016/DC/rawdata/Drug_synergy_data/Raw_Data_csv/cell_drug_count.txt" or die; # first line of this file has minor bug
+open REF_DATA, "data/cell_drug_count.txt" or die;
 while ($line=<REF_DATA>){
 	chomp $line;
 	@table=split "\t", $line;

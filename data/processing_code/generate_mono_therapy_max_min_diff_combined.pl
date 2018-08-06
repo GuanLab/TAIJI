@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 
-open OLD, "../monotherapy/mono_therapy_min_max_avg.txt_combined" or die;
+open OLD, "data/monotherapy/mono_therapy_min_max_avg.txt_combined" or die;
 ## first drug 2 then drug 1.;
 while ($line=<OLD>){
 	chomp $line;
@@ -25,8 +25,8 @@ while ($line=<OLD>){
 }
 close OLD;
 
-open OLD, "../monotherapy/mono_therapy_min_max_avg.txt_combined" or die;
-open NEW, ">../monotherapy/mono_therapy_min_max_avg.txt_combined_diff" or die;
+open OLD, "data/monotherapy/mono_therapy_min_max_avg.txt_combined" or die;
+open NEW, ">data/monotherapy/mono_therapy_min_max_avg.txt_combined_diff" or die;
 while ($line=<OLD>){
 	chomp $line;
 	@table=split "\t", $line;

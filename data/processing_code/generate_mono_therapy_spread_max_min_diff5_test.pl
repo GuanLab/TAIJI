@@ -2,7 +2,7 @@
 
 # 15 features; minus cell avg
 
-open OLD, "../monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
+open OLD, "data/monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
 ## first drug 2 then drug 1.;
 while ($line=<OLD>){
 	chomp $line;
@@ -24,8 +24,8 @@ while ($line=<OLD>){
 }
 close OLD;
 
-open OLD, "../monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
-open NEW, ">../monotherapy/mono_therapy_spread_min_max_avg_diff5_test.txt" or die;
+open OLD, "data/monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
+open NEW, ">data/monotherapy/mono_therapy_spread_min_max_avg_diff5_test.txt" or die;
 while ($line=<OLD>){
 	chomp $line;
 	@table=split "\t", $line;

@@ -1,9 +1,10 @@
 #!/usr/bin/perl
 
 # 15 features; (mono1; mono2; mono1+mono2) * 5 concentrations
-
-@mat=glob "../monotherapy_spread_csv/*";
-open NEW, ">../monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
+$path1=$ARGV[0];
+@mat=glob "${path1}/*";
+#@mat=glob "data/monotherapy_spread_csv/*";
+open NEW, ">data/monotherapy/mono_therapy_spread_min_max_avg_test.txt" or die;
 foreach $file (@mat){
 	open OLD, "$file" or die;
 	@t=split '/', $file;

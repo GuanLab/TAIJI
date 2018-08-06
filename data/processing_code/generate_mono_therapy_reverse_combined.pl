@@ -1,8 +1,10 @@
 #!/usr/bin/perl
 #
-open OLD, "../test_monotherapy.csv" or die;
+#open OLD, "data/test_monotherapy.csv" or die;
+$filename=$ARGV[0];
+open OLD, $filename or die;
 <OLD>;
-open NEW, ">../monotherapy/mono_therapy_reverse.txt_combined" or die;
+open NEW, ">data/monotherapy/mono_therapy_reverse.txt_combined" or die;
 
 while ($line=<OLD>){
 	chomp $line;

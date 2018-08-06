@@ -6,7 +6,6 @@ Please contact me (hyangl@umich.edu) if you have any questions or suggestions.
 
 ## Installation
 Git clone a copy of TAIJI:
-
 ```
 git clone https://github.com/GuanLab/TAIJI.git
 ```
@@ -15,7 +14,6 @@ git clone https://github.com/GuanLab/TAIJI.git
 * [python](https://www.python.org) (3.6.5)
 * [numpy](http://www.numpy.org/) (1.13.3). It comes pre-packaged in Anaconda.
 * [scikit-learn](http://scikit-learn.org) (0.19.0) A popular machine learning package. It can be installed by:
-
 ```
 pip install -U scikit-learn
 ```
@@ -29,17 +27,41 @@ The example monotherapy data of 100 query drug combinations are provided. Of not
 
 ### 2. Making predictions (using default parameters)
 Once you prepare and format the input monotherapy data, you can put them in the correponding data folder (and remove the example data). Then you can simply run TAIJI by
-
 ```
-bash TAIJI.sh
+python TAIJI.py
 ```
 TAIJI automatically generates a prediction file prediction.csv in a very short time. If you run it using the simulated example data of 100 drug combinations, it takes about 5mins.
 
+You can also provide the input file/directory and output directory:
+```
+python TAIJI.py -i1 data/test_monotherapy.csv -i2 data/monotherapy_spread_csv/ -o ../
+```
+The argument i1 is the monotherapy summary table. The i2 is the directory of monotherapy spread sheets. The o is the output directory.
+
 ### 3. Making predictions (using customized parameters)
+To run TAIJI with advanced options, you can check the descriptions by running:
+```
+python TAIJI.py -h
+```
+It returns:
+```
+  -i1 INPUT1, --input1 INPUT1
+                        Input summary table (example: data/test_monotherapy.csv)
+  -i2 INPUT2, --input2 INPUT2
+                        Directory of the input monotherapy spread sheets (example: data/monotherapy_spread_csv/)
+  -w1 WEIGHT1, --weight1 WEIGHT1
+                        Weight for the monotherapy component
+  -w2 WEIGHT2, --weight2 WEIGHT2
+                        Weight for the cell line-drug component
+  -w3 WEIGHT3, --weight3 WEIGHT3
+                        Weight for the molecular profile component
+  -o OUTPUTDIR, --outputdir OUTPUTDIR
+                        Output directory
+```
 TAIJI has three prediction components based on different inputs: 1. monotherapy treatment effect 2. cell line-drug frequency 3. molecular profiles. The default weights of these three components are 1:1:2, which are based on [Yuanfang's winning solution](https://www.synapse.org/#!Synapse:syn5614689/wiki/396206) in the [AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge](https://www.synapse.org/#!Synapse:syn4231880/wiki/).
 
 These weights can be adjusted based on the input data. For example, if the user believes that their monotherapy input data is less reliable (e.g. due to large noise), they can adjust these weights (e.g. from 1:1:2 to 0.8:2:4) by running TAIJI like this:
 ```
-bash TAIJI.sh 0.8 2 4
+python TAIJI.py -w1 0.8 -w2 2 -w3 4
 ```
 

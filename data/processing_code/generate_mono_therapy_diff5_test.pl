@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 
-open OLD, "../monotherapy/mono_therapy.txt_combined" or die;
+open OLD, "data/monotherapy/mono_therapy.txt_combined" or die;
 ## first drug 2 then drug 1.;
 while ($line=<OLD>){
 	chomp $line;
@@ -32,9 +32,9 @@ while ($line=<OLD>){
 }
 close OLD;
 
-open OLD, "../monotherapy/mono_therapy.txt_combined" or die;
-open NEW, ">../monotherapy/mono_therapy.txt_combined_diff5" or die;
-open NEW1, ">../monotherapy/mono_therapy_reverse.txt_combined_diff5" or die;
+open OLD, "data/monotherapy/mono_therapy.txt_combined" or die;
+open NEW, ">data/monotherapy/mono_therapy.txt_combined_diff5" or die;
+open NEW1, ">data/monotherapy/mono_therapy_reverse.txt_combined_diff5" or die;
 while ($line=<OLD>){
 	chomp $line;
 	@table=split "\t", $line;

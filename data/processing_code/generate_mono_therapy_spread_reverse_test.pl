@@ -1,9 +1,11 @@
 #!/usr/bin/perl
 #
 
-@mat=glob "../monotherapy_spread_csv/*";
+#@mat=glob "data/monotherapy_spread_csv/*";
+$path1=$ARGV[0];
+@mat=glob "${path1}/*";
 
-open NEW, ">../monotherapy/mono_therapy_spread_reverse_test.txt" or die;
+open NEW, ">data/monotherapy/mono_therapy_spread_reverse_test.txt" or die;
 foreach $file (@mat){
 	open OLD, "$file" or die;
 	@t=split '/', $file;
