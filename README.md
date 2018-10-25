@@ -1,15 +1,15 @@
 TAIJI: Approaching Experimental Replicates-level Accuracy for Drug Synergy Prediction
 
-This is the reimplementation of Yuanfang's winning algorithm in the ENCODE-DREAM *in vivo* Transcription Factor Binding Site Prediction Challenge
+This is the package of Yuanfang's winning algorithm in the AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge
 
-background: [ENCODE-DREAM](https://www.synapse.org/#!Synapse:syn4231880/wiki/)
+background: [Drug Combination Prediction](https://www.synapse.org/#!Synapse:syn4231880/wiki/)
 
 see also: [Yuanfang Guan's 1st Place Solution](https://www.synapse.org/#!Synapse:syn5614689/wiki/396206) and [Original Code](https://www.synapse.org/#!Synapse:syn5614689/files/)
 
 Please contact (gyuanfan@umich.edu or hyangl@umich.edu) if you have any questions or suggestions.
 
 <p align="left">
-<img src="https://github.com/Hongyang449/TAIJI/blob/master/figure/workflow.png" width="1000">
+<img src="https://github.com/Hongyang449/TAIJI/blob/master/figure/workflow.png" width="700">
 </p>
 
 ---
@@ -62,6 +62,7 @@ To run TAIJI, the monotherapy data are required to extract features. Two types o
 * FILENAME: the filename of the corresponding monotherapy spreadsheets
 
 **2. monotherapy spreadsheets** (e.g. data/monotherapy_spread_csv/drug1.drug2.cell_line.Rep1.csv)
+| --------- | --------- | ----- | ----- | ----- | ----- | ----- | ---------- |
 |           | 0         | 0.03  | 0.1   | 0.3   | 1     | 3     | (=Agent 2) |
 | 0         | 100       | 113.8 | 106.4 | 98.1  | 100.2 | 91.7  |            |
 | 0.01      | 104.5     | NA    | NA    | NA    | NA    | NA    |            |
