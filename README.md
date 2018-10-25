@@ -62,6 +62,7 @@ To run TAIJI, the monotherapy data are required to extract features. Two types o
 * FILENAME: the filename of the corresponding monotherapy spreadsheets
 
 **2. monotherapy spreadsheets** (e.g. data/monotherapy_spread_csv/drug1.drug2.cell_line.Rep1.csv)
+
 | --------- | --------- | ----- | ----- | ----- | ----- | ----- | ---------- |
 |           | 0         | 0.03  | 0.1   | 0.3   | 1     | 3     | (=Agent 2) |
 | 0         | 100       | 113.8 | 106.4 | 98.1  | 100.2 | 91.7  |            |
