@@ -63,6 +63,7 @@ To run TAIJI, the monotherapy data are required to extract features. Two types o
 
 **2. monotherapy spreadsheets** (e.g. data/monotherapy_spread_csv/drug1.drug2.cell_line.Rep1.csv)
 
+|           |           |       |       |       |       |       |            |
 | --------- | --------- | ----- | ----- | ----- | ----- | ----- | ---------- |
 |           | 0         | 0.03  | 0.1   | 0.3   | 1     | 3     | (=Agent 2) |
 | 0         | 100       | 113.8 | 106.4 | 98.1  | 100.2 | 91.7  |            |
@@ -78,8 +79,8 @@ To run TAIJI, the monotherapy data are required to extract features. Two types o
 | Unit2     | \muM      |       |       |       |       |       |            | 
 | Title     | CELL_LINE |       |       |       |       |       |            |   
 
-* the 1st row is the 5 concentrations of drug A (Agent1)
-* the 2nd row is the corresponding 5 responses to drug A
+* the 1st row is the 5 concentrations (0.03, 0.1, 0.3, 1, 3) of drug A (Agent1)
+* the 2nd row is the corresponding 5 responses (113.8, 106.4, 98.1, 100.2, 91.7) to drug A
 * the 1st column is the 5 concentrations (0.01, 0.03, ... , 1) of drug B (Agent2)
 * the 2nd column is the corresponding 5 responses (104.5, 108.5, 73, 34.5, 18.8) to drug B
 
