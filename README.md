@@ -1,4 +1,4 @@
-TAIJI: Approaching Experimental Replicates-level Accuracy for Drug Synergy Prediction
+## TAIJI: Approaching Experimental Replicates-level Accuracy for Drug Synergy Prediction
 
 This is the package of Yuanfang's winning algorithm in the AstraZeneca-Sanger Drug Combination Prediction DREAM Challenge
 
