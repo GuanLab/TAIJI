@@ -1,11 +1,16 @@
 #!/usr/bin/perl
-#
+
 @mat=glob "TEST_GS/*" or die;
 open NEW, ">pred_count.txt" or die;
 print NEW "CELL_LINE,COMBINATION_ID,PREDICTION\n";
 foreach $file (@mat){
 	#system "rm output1.txt output2.txt output_reverse1.txt output_reverse2.txt output_ori1.txt output_ori2.txt";
-	system "rm output1.txt output2.txt";
+	if (-f "output1.txt"){
+	    system "rm output1.txt";
+        }
+	if (-f "output2.txt"){
+	    system "rm output2.txt";
+        }
 
         @t=split '/', $file;
         $drug_pair=pop @t; 

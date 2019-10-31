@@ -5,6 +5,8 @@ from numpy import genfromtxt
 from sklearn import ensemble
 import pickle
 import sys
+import warnings
+warnings.filterwarnings("ignore")
 
 num_tree=300
 max_depth=3

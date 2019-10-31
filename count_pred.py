@@ -5,6 +5,8 @@ from numpy import genfromtxt
 from sklearn import ensemble
 import pickle
 import sys
+import warnings
+warnings.filterwarnings("ignore")
 
 test=genfromtxt('test.txt',delimiter='\t')
 if test.ndim==1:
